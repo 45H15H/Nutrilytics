@@ -70,7 +70,9 @@ def extract(image_path, img_format):
 
 app = Flask(__name__)
 
+# Load environment variables
 load_dotenv()
+
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 
