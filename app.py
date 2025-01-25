@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import os
-from dotenv import load_dotenv
-
+from dotenv import load_dotenv  
 from openai import OpenAI
 import base64
 
@@ -10,7 +9,6 @@ import json
 
 endpoint = "https://models.inference.ai.azure.com"
 model_name = "gpt-4o"
-
 
 # Initialize OpenAI client
 client = None
@@ -40,7 +38,7 @@ def extract(image_path, img_format):
     Output the result as a raw JSON string as follows:
     food name: [food name], serving size: [value], calories: [value], added sugars: [value], biotin: [value], calcium: [value], chloride: [value], choline: [value], cholesterol: [value], chromium: [value], copper: [value], dietary fiber: [value], fat: [value], folate/folic acid: [value], iodine: [value], iron: [value], magnesium: [value], manganese: [value], molybdenum: [value], niacin: [value], pantothenic acid: [value], phosphorus: [value], potassium: [value], protein: [value], riboflavin: [value], saturated fat: [value], selenium: [value], sodium: [value], thiamin: [value], total carbohydrate: [value], vitamin A: [value], vitamin B6: [value], vitamin B12: [value], vitamin C: [value], vitamin D: [value], vitamin E: [value], vitamin K: [value], zinc: [value]
     
-    Don't use ```json ``` or any other code block formatting. Just the raw JSON string."""
+    Don't use json  or any other code block formatting. Just the raw JSON string."""
 
     # Generate response
     response = client.chat.completions.create(
