@@ -6,8 +6,8 @@ from openai import OpenAI
 import base64
 import json
 
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "gpt-4o"
+endpoint = "https://generativelanguage.googleapis.com/v1beta/openai/"
+model_name = "gemini-1.5-flash"
 
 # Initialize OpenAI client
 client = None
