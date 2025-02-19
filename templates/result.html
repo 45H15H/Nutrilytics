@@ -26,7 +26,7 @@
           {% for key, value in items[5:] %}
           {% if value != '0g' and value != '0mcg' and value != '0mg' %}
           <tr>
-            <td>{{ key }}</td>
+            <td>{{ key.replace('_', ' ').title() }}</td>
             <td>{{ value }}</td>
           </tr>
           {% endif %}
@@ -41,16 +41,16 @@
 <div class="result-container-2">
   <h2 class="extracted-info">Extracted Information:</h2>
       <div> 
-        <h3 class="extracted-info-h">Food Name:</h3>
-        <p class="extracted-info-p">{{ result.food_name }}</p>
-        <h3 class="extracted-info-h">Food uses:</h3>
-        <p class="extracted-info-p"> {{ result.food_uses }}</p>
-        <h3 class="extracted-info-h">Recommended Age Group:</h3>
-        <p class="extracted-info-p"> {{ result.recommended_age_group }}</p>
-        <h3 class="extracted-info-h">Pros:</h3>
-        <p class="extracted-info-p"> {{ result.pros }}</p>
-        <h3 class="extracted-info-h">Cons:</h3>
-        <p class="extracted-info-p"> {{ result.cons }}</p>
+        <!-- <h3 class="extracted-info-h">Food Name:</h3> -->
+        <p class="extracted-info-p"><b>Food Name:</b> {{ result.food_name }}</p>
+        <!-- <h3 class="extracted-info-h">Food uses:</h3> -->
+        <p class="extracted-info-p"><b>Food uses:</b> {{ result.food_uses }}</p>
+        <!-- <h3 class="extracted-info-h">Recommended Age Group:</h3> -->
+        <p class="extracted-info-p"><b>Recommended Age Group:</b> {{ result.recommended_age_group }}</p>
+        <!-- <h3 class="extracted-info-h">Pros:</h3> -->
+        <p class="extracted-info-p"><b>Pros:</b> {{ result.pros }}</p>
+        <!-- <h3 class="extracted-info-h">Cons:</h3> -->
+        <p class="extracted-info-p"><b>Cons:</b> {{ result.cons }}</p>
       </div>
 </div> 
 {% endblock %}
