@@ -39,18 +39,37 @@
   </div>
 
 <div class="result-container-2">
-  <h2 class="extracted-info">Extracted Information:</h2>
-      <div> 
-        <!-- <h3 class="extracted-info-h">Food Name:</h3> -->
-        <p class="extracted-info-p"><b>Food Name:</b> {{ result.food_name }}</p>
-        <!-- <h3 class="extracted-info-h">Food uses:</h3> -->
-        <p class="extracted-info-p"><b>Food uses:</b> {{ result.food_uses }}</p>
-        <!-- <h3 class="extracted-info-h">Recommended Age Group:</h3> -->
-        <p class="extracted-info-p"><b>Recommended Age Group:</b> {{ result.recommended_age_group }}</p>
-        <!-- <h3 class="extracted-info-h">Pros:</h3> -->
-        <p class="extracted-info-p"><b>Pros:</b> {{ result.pros }}</p>
-        <!-- <h3 class="extracted-info-h">Cons:</h3> -->
-        <p class="extracted-info-p"><b>Cons:</b> {{ result.cons }}</p>
-      </div>
-</div> 
+  <h2 class="extracted-info">Extracted Information</h2>
+  <table class="extracted-info-table"> 
+    <tr>
+      <td><b>Food Name:</b></td>
+      <td>{{ result.food_name }}</td>
+    </tr>
+    <tr>
+      <td><b>Food uses:</b></td>
+      <td>{{ result.food_uses }}</td>
+    </tr>
+    <tr>
+      <td><b>Recommended Age Group:</b></td>
+      <td>{{ result.recommended_age_group }}</td>
+    </tr>
+    <tr>
+      <td><b>Pros:</b></td>
+      <td>{{ result.pros }}</td>
+    </tr>
+    <tr>
+      <td><b>Cons:</b></td>
+      <td>{{ result.cons }}</td>
+    </tr>
+  </table>
+</div>
+
+<div style="display: flex; justify-content: center; padding-bottom: 20px;">
+  <div>
+    <button class="back-button" onclick="window.history.back()">Try another one</button>
+  </div>
+  <div>
+    <button class="home-button" onclick="window.location.href='/'">Home</button>
+  </div>
+</div>
 {% endblock %}
