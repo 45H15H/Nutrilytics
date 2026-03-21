@@ -8,7 +8,7 @@ import json
 from pydantic import BaseModel
 
 endpoint = "https://generativelanguage.googleapis.com/v1beta/openai/"
-model_name = "gemini-2.0-flash"
+model_name = "gemini-3.1-flash-lite-preview"
 
 # Initialize OpenAI client
 client = None
